@@ -6,12 +6,12 @@ public class HourContract {
 	
 	private Date date;
 	private double valuePerHour;
-	private double hours;
+	private int hours;
 	
 	public HourContract() {		
 	}
 
-	public HourContract(Date date, double valuePerHour, double hours) {
+	public HourContract(Date date, double valuePerHour, int hours) {
 		super();
 		this.date = date;
 		this.valuePerHour = valuePerHour;
@@ -38,7 +38,7 @@ public class HourContract {
 		return hours;
 	}
 
-	public void setHours(double hours) {
+	public void setHours(int hours) {
 		this.hours = hours;
 	}
 	

@@ -17,8 +17,7 @@ public class Worker {
 	public Worker() {		
 	}
 
-	public Worker(String name, WorkerLevel level, double baseSalary, Department department,
-			List<HourContract> contracts) {
+	public Worker(String name, WorkerLevel level, double baseSalary, Department department) {
 		this.name = name;
 		this.level = level;
 		this.baseSalary = baseSalary;
@@ -60,10 +59,6 @@ public class Worker {
 
 	public List<HourContract> getContracts() {
 		return contracts;
-	}
-
-	public void setContracts(List<HourContract> contracts) {
-		this.contracts = contracts;
 	}
 	
 	public void addContract(HourContract contract) {
