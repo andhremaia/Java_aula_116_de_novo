@@ -29,11 +29,11 @@ public class Program {
 		String departmentName = sc.next();
 		department = new Department(departmentName);
 		System.out.print("Enter worker data: ");
-		System.out.println("Name");
+		System.out.print("Name: ");
 		String workerName = sc.next();
-		System.out.println("Level");
+		System.out.print("Leve: ");
 		String level = sc.next();
-		System.out.println("Base salary");
+		System.out.print("Base salary: ");
 		double baseSalary = sc.nextDouble();
 		
 		//Cria um novo trabalhador e preenche seus campos com os dados que o usuario digitou
@@ -45,7 +45,7 @@ public class Program {
 		int n = sc.nextInt();
 		
 		for (int i = 0; i < n; i ++) {
-			System.out.print("Enter contract #" + 1 + " data: ");
+			System.out.print("Enter contract #" + (1 + i) + " data: ");
 			System.out.print("Date (DD/MM/YYYY): ");
 		    date = sdf.parse(sc.next());
 			System.out.print("Value per hour: ");
@@ -59,7 +59,16 @@ public class Program {
 			//Adiciona o contrato a lista de contrato do trabalhador
 			worker.addContract(contract);
 		}
+		
+		System.out.print("Enter month and year to calculate income (MM/YYYY)");
+		String monthAndYear = sc.next();
+		int month = Integer.parseInt(monthAndYear.substring(0, 2));
+		int year = Integer.parseInt(monthAndYear.substring(3));
+		System.out.println("Name: " + worker.getName());
+		System.out.println("Department: " + worker.getDepartment().getName());
+		System.out.println("Income for " + monthAndYear + ": " + worker.income(year, month));
 		sc.close();
+		
 		
 	}
 }
